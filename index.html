@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <style>
+        body {
+            background: #642B73;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #C6426E, #642B73);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #C6426E, #642B73);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        #form {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 5%;
+        }
+    </style>
+    <div class="row">
+        <div id='form' class="col-8 col-md-4  mx-auto">
+            <h3 id="form__head" class="mb-4 ">Registration Form</h3>
+            <form id="newform" method="POST" action="/register" class="needs-validation" novalidate>
+
+
+                <div class="form-group p-1">
+                    <label for="username"> Username </label>
+
+                    <input type="text" class="form-control" id="username" name="username" required />
+
+                    <div class="invalid-feedback">username can`t username cannot be blank or have space</div>
+                    <div class="valid-feedback">Looks Good</div>
+
+                </div>
+                <div class="form-group p-1">
+                    <label for="email"> Email </label>
+                    <input type="email" class="form-control" name="email" id="email" required />
+                    <div id="email-validation" class="invalid-feedback">Please Check Mail again.</div>
+
+                </div>
+                <div class="form-group p-1">
+                    <label for="password"> Password </label>
+                    <input type="password" class="form-control" name="password" id="password" required />
+                    <div class="invalid-feedback">Please make sure your password contains at least (a
+                        Capital
+                        letter, a number and a
+                        special charcter).</div>
+
+
+                </div>
+                <button type="submit" class=" mt-4 d-block w-100 btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
