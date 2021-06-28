@@ -10,8 +10,11 @@ function validateUsername(e) {
   const username = document.querySelector('#username');
   if (reSpaces.test(username.value)) {
     username.classList.remove('is-invalid');
+    username.classList.add('is-valid');
     return true;
   } else {
+    username.classList.remove('is-valid');
+
     username.classList.add('is-invalid');
     return false;
   }
@@ -23,9 +26,13 @@ function validateEmail(e) {
 
   if (reSpaces.test(email.value) && re.test(email.value)) {
     email.classList.remove('is-invalid');
+    email.classList.add('is-valid');
+
     return true;
   } else {
     email.classList.add('is-invalid');
+    email.classList.remove('is-valid');
+
     return false;
   }
 }
@@ -35,9 +42,13 @@ function validatePassword() {
   const re = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})(?=.*[!@#$%^&*])/;
   if (re.test(password.value) && reSpaces.test(password.value)) {
     password.classList.remove('is-invalid');
+    password.classList.add('is-valid');
+
     return true;
   } else {
     password.classList.add('is-invalid');
+    password.classList.remove('is-valid');
+
     return false;
   }
 }
